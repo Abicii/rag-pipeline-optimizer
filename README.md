@@ -20,6 +20,13 @@ The deployed version runs **one optimized pipeline** for stability on free infra
 but the codebase is structured to support **multiple pipelines locally**.
 
 ---
+Snapshots
+
+<img src="Screenshot 2026-01-12 150249.png" width="500" />
+<img src="Screenshot 2026-01-12 150519.png" width="500" />
+<img src="Screenshot 2026-01-12 150552.png" width="500" />
+<img src="Screenshot 2026-01-12 150624.png" width="500" />
+<img src="Screenshot 2026-01-12 150610.png" width="500" />
 
 ## 🧠 Important Note
 
