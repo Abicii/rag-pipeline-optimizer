@@ -3,6 +3,6 @@ from apps.api.main import handle_upload
 
 app = FastAPI()
 
-@app.post("/upload")
+@app.post("/")
 async def upload(file: UploadFile = File(...)):
     return await handle_upload(file)

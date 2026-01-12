@@ -3,6 +3,6 @@ from apps.api.main import health_check
 
 app = FastAPI()
 
-@app.get("/health")
+@app.get("/")
 def health():
     return health_check()

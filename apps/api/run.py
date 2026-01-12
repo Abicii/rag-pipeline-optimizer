@@ -4,6 +4,6 @@ from apps.api.main import handle_run
 
 app = FastAPI()
 
-@app.post("/run")
+@app.post("/")
 def run(request: RunRequest):
     return handle_run(request)
