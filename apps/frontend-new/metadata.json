@@ -1,0 +1,5 @@
+{
+  "name": "RAG Pipeline Optimizer",
+  "description": "A high-end, experimental MLOps interface for visualizing and optimizing Retrieval-Augmented Generation pipelines using advanced animations and simulations.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,205 @@
+Machine Learning Overview
+
+Machine learning is a subfield of artificial intelligence concerned with building
+systems that learn patterns from data and improve performance on a task without
+being explicitly programmed. Instead of hard-coded rules, machine learning models
+infer statistical relationships from examples.
+
+At a high level, machine learning systems are defined by three components: data,
+models, and optimization algorithms. Data provides the empirical foundation,
+models define the hypothesis space, and optimization algorithms search for model
+parameters that minimize error.
+
+Machine learning is broadly categorized into supervised learning, unsupervised
+learning, semi-supervised learning, and reinforcement learning. Each paradigm
+addresses different problem settings and assumptions about the availability of
+labels and feedback.
+
+Supervised Learning
+
+Supervised learning involves training a model on labeled data, where each example
+consists of an input and a corresponding target output. The goal is to learn a
+function that maps inputs to outputs accurately on unseen data.
+
+Common supervised learning tasks include classification and regression. In
+classification, the output is a discrete label, while in regression, the output
+is a continuous value.
+
+Linear regression is one of the simplest supervised learning algorithms. It models
+the relationship between input features and a continuous target as a linear
+combination of features. Despite its simplicity, linear regression forms the
+foundation for more complex models.
+
+Logistic regression is a classification algorithm that models the probability of
+a binary outcome using a logistic function. Although it is called regression,
+it is primarily used for classification tasks.
+
+Decision trees are non-linear models that recursively split the feature space
+based on decision rules. They are easy to interpret but prone to overfitting.
+Ensemble methods such as random forests and gradient boosting address this issue
+by combining multiple trees.
+
+Support vector machines aim to find a decision boundary that maximizes the margin
+between classes. They are effective in high-dimensional spaces but can be
+computationally expensive for large datasets.
+
+Unsupervised Learning
+
+Unsupervised learning deals with data that does not have labeled outputs. The goal
+is to discover hidden structure or patterns within the data.
+
+Clustering is a common unsupervised task. Algorithms such as k-means partition
+data into clusters based on similarity. Hierarchical clustering builds a tree of
+clusters, while density-based methods like DBSCAN identify clusters of arbitrary
+shape.
+
+Dimensionality reduction techniques aim to reduce the number of features while
+preserving important information. Principal Component Analysis (PCA) projects
+data onto orthogonal directions of maximum variance. Non-linear methods such as
+t-SNE and UMAP are often used for visualization.
+
+Unsupervised learning is particularly useful for exploratory data analysis,
+anomaly detection, and representation learning.
+
+Semi-Supervised Learning
+
+Semi-supervised learning lies between supervised and unsupervised learning. It
+leverages a small amount of labeled data along with a large amount of unlabeled
+data. This approach is useful when labeling data is expensive or time-consuming.
+
+Techniques such as self-training, co-training, and consistency regularization
+allow models to learn from unlabeled data by exploiting assumptions about data
+distribution and smoothness.
+
+Reinforcement Learning
+
+Reinforcement learning focuses on learning through interaction with an environment.
+An agent takes actions, receives rewards, and updates its policy to maximize
+cumulative reward over time.
+
+Key components of reinforcement learning include states, actions, rewards, and
+policies. The environment defines the dynamics, while the agent learns a strategy
+for decision-making.
+
+Classic reinforcement learning algorithms include Q-learning and SARSA. More
+advanced methods such as policy gradients and actor-critic architectures enable
+learning in continuous action spaces.
+
+Reinforcement learning has been successfully applied to robotics, game playing,
+and control systems. However, it often suffers from sample inefficiency and
+stability challenges.
+
+Neural Networks
+
+Neural networks are models inspired by the structure of the human brain. They are
+composed of layers of interconnected units called neurons. Each neuron computes a
+weighted sum of inputs followed by a non-linear activation function.
+
+The simplest neural network is the perceptron, which performs binary classification.
+Multi-layer perceptrons extend this idea by stacking multiple layers, enabling the
+model to learn complex non-linear functions.
+
+Activation functions introduce non-linearity into neural networks. Common choices
+include ReLU, sigmoid, and tanh. The choice of activation function affects training
+dynamics and model expressiveness.
+
+Training neural networks involves minimizing a loss function using gradient-based
+optimization. Backpropagation efficiently computes gradients by applying the chain
+rule through the network.
+
+Deep Learning
+
+Deep learning refers to neural networks with many layers. These models have achieved
+state-of-the-art performance in areas such as computer vision, natural language
+processing, and speech recognition.
+
+Convolutional neural networks are specialized for processing grid-like data such as
+images. They use convolutional filters to capture local patterns and spatial
+hierarchies.
+
+Recurrent neural networks are designed for sequential data. They maintain hidden
+state across time steps. Variants such as LSTMs and GRUs address the vanishing
+gradient problem.
+
+Transformers are a modern architecture based on self-attention mechanisms. They
+process sequences in parallel and have become the dominant approach in natural
+language processing.
+
+Optimization and Training
+
+Optimization algorithms determine how model parameters are updated during training.
+Stochastic gradient descent and its variants such as Adam and RMSProp are commonly
+used.
+
+Learning rate is a critical hyperparameter. Too large a learning rate can cause
+divergence, while too small a learning rate leads to slow convergence.
+
+Regularization techniques help prevent overfitting. These include L1 and L2
+regularization, dropout, and data augmentation.
+
+Batch normalization stabilizes training by normalizing intermediate activations.
+It allows for higher learning rates and faster convergence.
+
+Evaluation and Generalization
+
+Evaluating machine learning models requires separating data into training,
+validation, and test sets. This helps estimate how well the model generalizes to
+unseen data.
+
+Common evaluation metrics include accuracy, precision, recall, F1-score, and
+area under the ROC curve. The choice of metric depends on the task and class
+distribution.
+
+Overfitting occurs when a model performs well on training data but poorly on new
+data. Underfitting occurs when the model is too simple to capture underlying
+patterns.
+
+Bias-variance trade-off describes the tension between model complexity and
+generalization. High-bias models are simple but inaccurate, while high-variance
+models are flexible but unstable.
+
+Feature Engineering
+
+Feature engineering involves transforming raw data into meaningful features.
+Good features can significantly improve model performance.
+
+Techniques include normalization, encoding categorical variables, feature scaling,
+and polynomial feature expansion. Domain knowledge plays a crucial role in feature
+design.
+
+In many modern deep learning systems, feature engineering is partially automated
+through representation learning.
+
+Model Deployment and MLOps
+
+Deploying machine learning models requires integrating them into production systems.
+This includes handling inference, monitoring performance, and updating models over
+time.
+
+MLOps refers to the practices and tools used to manage the machine learning lifecycle.
+It draws inspiration from DevOps but introduces additional challenges related to
+data, models, and evaluation.
+
+Key MLOps concerns include reproducibility, versioning, monitoring data drift, and
+automated retraining. Without proper MLOps practices, machine learning systems
+degrade silently.
+
+Ethics and Responsible AI
+
+Machine learning systems can reflect and amplify biases present in data. Ethical
+considerations include fairness, transparency, and accountability.
+
+Explainability techniques aim to make model decisions interpretable. Methods such
+as SHAP and LIME provide local explanations for model predictions.
+
+Responsible deployment of machine learning systems requires continuous monitoring
+and human oversight.
+
+Conclusion
+
+Machine learning is a broad and evolving field with applications across industries.
+Understanding core concepts, trade-offs, and limitations is essential for building
+effective and trustworthy systems. As models grow more powerful, evaluation,
+governance, and operational discipline become increasingly important.
+
+End of document.
