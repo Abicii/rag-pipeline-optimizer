@@ -1,8 +1,8 @@
 from fastapi import FastAPI, UploadFile, File
+from apps.api.main import handle_upload
 
 app = FastAPI()
 
-@app.post("/api/upload")
+@app.post("/upload")
 async def upload(file: UploadFile = File(...)):
-    # your existing upload logic here
-    return {"status": "ok"}
+    return await handle_upload(file)

@@ -1,12 +1,9 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from apps.api.schemas import RunRequest
+from apps.api.main import handle_run
 
 app = FastAPI()
 
-class Question(BaseModel):
-    question: str
-
-@app.post("/api/run")
-async def run(question: Question):
-    # your existing evaluation logic here
-    return {"ranked_results": [...]}
+@app.post("/run")
+def run(request: RunRequest):
+    return handle_run(request)
