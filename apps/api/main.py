@@ -10,18 +10,18 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="RAG Pipeline Optimizer API")
 # uncomment while runnning locally with frontend
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=[
-#         "http://localhost:5173",
-#         "http://127.0.0.1:5173",
-#         "http://192.168.1.25:3000",
-#         "http://localhost:3000"
-#     ],
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://192.168.1.25:3000",
+        "http://localhost:3000"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/health")
 def health():

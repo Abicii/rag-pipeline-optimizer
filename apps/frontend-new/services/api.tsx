@@ -1,8 +1,8 @@
 import axios from "axios";
 import { SimulationResult } from "../types";
 
-// const API_BASE = "http://127.0.0.1:8000";
-const API_BASE = import.meta.env.VITE_API_BASE || "/api";
+const API_BASE = "http://127.0.0.1:8000";
+// const API_BASE = import.meta.env.VITE_API_BASE || "/api";
 
 export async function uploadDocument(file: File) {
   const formData = new FormData();
