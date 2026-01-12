@@ -4,6 +4,8 @@ A simple, experimental project to explore and evaluate **Retrieval-Augmented Gen
 
 This repo focuses on **retrieval, chunking, embeddings, and evaluation** — not full LLM generation.
 
+Deployed : https://rag-pipeline-optimizer-qpsa-k6n8wam3v.vercel.app/
+
 ---
 
 ## ✨ What This Project Does
