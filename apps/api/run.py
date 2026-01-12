@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from apps.api.schemas import RunRequest
-from apps.api.main import handle_run
+from schemas import RunRequest
+from main import handle_run
 
 app = FastAPI()
 

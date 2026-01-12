@@ -1,6 +1,8 @@
 from fastapi import UploadFile, File, HTTPException
-from apps.api.state import DOCUMENT_STORE
-from apps.api.schemas import RunRequest
+# from apps.api.state import DOCUMENT_STORE
+# from apps.api.schemas import RunRequest
+from state import DOCUMENT_STORE
+from schemas import RunRequest
 from core.pipelines.config import PIPELINES
 from core.pipelines.runner import run_pipeline
 from core.evaluation.scorer import score_pipeline

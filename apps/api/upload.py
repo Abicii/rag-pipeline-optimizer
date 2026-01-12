@@ -1,5 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
-from apps.api.main import handle_upload
+from main import handle_upload
 
 app = FastAPI()
 
