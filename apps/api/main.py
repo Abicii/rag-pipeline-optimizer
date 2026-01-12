@@ -1,18 +1,30 @@
-from fastapi import UploadFile, File, HTTPException
-# from apps.api.state import DOCUMENT_STORE
-# from apps.api.schemas import RunRequest
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
 from state import DOCUMENT_STORE
-from schemas import RunRequest
+from schemas import RunRequest, RunResponse
 from core.pipelines.config import PIPELINES
 from core.pipelines.runner import run_pipeline
 from core.evaluation.scorer import score_pipeline
 
+app = FastAPI(title="RAG Pipeline Optimizer API")
 
-def health_check():
+# Enable CORS for frontend (Vercel)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # safe for demo; lock down later if needed
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/health")
+def health():
     return {"status": "ok"}
 
 
-async def handle_upload(file: UploadFile):
+@app.post("/upload")
+async def upload_file(file: UploadFile = File(...)):
     if not file.filename.endswith(".txt"):
         raise HTTPException(status_code=400, detail="Only .txt files supported")
 
@@ -26,7 +38,8 @@ async def handle_upload(file: UploadFile):
     }
 
 
-def handle_run(request: RunRequest):
+@app.post("/run", response_model=RunResponse)
+def run_pipelines(request: RunRequest):
     if DOCUMENT_STORE["text"] is None:
         raise HTTPException(status_code=400, detail="No document uploaded")
 
